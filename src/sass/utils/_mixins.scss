@@ -1,0 +1,24 @@
+@mixin bpoint($point) {
+    @if $point ==mobile {
+        @media only screen and (min-width: 320px) {
+            @content;
+        }
+    }
+
+    @else if $point ==tablet {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==desktop {
+        @media only screen and (min-width: 1280px) {
+            @content;
+        }
+    }
+}
+
+// Line-height
+@mixin lh($line-height, $font-size) {
+    line-height: calc($line-height / $font-size);
+}
