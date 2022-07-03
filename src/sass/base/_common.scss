@@ -1,0 +1,8 @@
+body {
+    background-color: getColor(primary);
+}
+
+body.modal-open,
+body.is-open {
+    overflow: hidden;
+}

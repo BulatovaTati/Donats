@@ -1,0 +1,24 @@
+// Colors
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+// Shadows
+@function getShadow($key) {
+    @return map-get($shadows, $key);
+}
+
+// Properties
+@function getProperty($key) {
+    @return map-get($properties, $key);
+}
+
+// Fonts
+@function getFont($key) {
+    @return map-get($fonts, $key);
+}
+
+// Breakpoints
+@function getSize($key) {
+    @return map-get($breakpoints, $key);
+}
