@@ -79,3 +79,21 @@ $breakpoints: (
 @function getSize($key) {
     @return map-get($breakpoints, $key);
 }
+
+$btnW: (
+    'mobile': 145px,
+    'desktop': 158px,
+);
+
+@function getBtnW($key) {
+    @return map-get($btnW, $key);
+}
+
+$btnH: (
+    'mobile': 40px,
+    'desktop': 45px,
+);
+
+@function getBtnH($key) {
+    @return map-get($btnH, $key);
+}

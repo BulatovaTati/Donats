@@ -1,0 +1,8 @@
+.btn {
+    @include Btn(mobile, mobile);
+
+    @media screen and (min-width: 1280px) {
+
+        @include Btn(desktop, desktop);
+    }
+}
