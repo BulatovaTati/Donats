@@ -1,0 +1,19 @@
+.hero__container {
+    text-align: center;
+}
+
+.hero__title {
+    @extend %main_title;
+    margin: 0px 15px 8px 15px;
+}
+
+.hero_subtitle {
+    margin-bottom: 32px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.hero__btn {
+    margin-bottom: 40px;
+}

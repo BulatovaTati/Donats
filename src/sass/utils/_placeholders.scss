@@ -7,3 +7,24 @@
     text-decoration: none;
     color: currentColor;
 }
+
+%title {
+    font-family: getFont(accent);
+    @include lh(30, 24, 24px);
+    text-align: center;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1280px) {
+        @include lh(65, 36, 36px);
+    }
+}
+
+%main_title {
+    font-family: getFont(accent);
+    @include lh(38, 30, 30px);
+    text-align: center;
+
+    @media screen and (min-width: 1280px) {
+        @include lh(65, 64, 64px);
+    }
+}

@@ -1,0 +1,17 @@
+.btn {
+    @include Btn(mobile, mobile);
+    font-family: getFont(accent);
+    @include lh(23, 18, 18px);
+
+    color: getColor(secondary);
+    background-color: getColor(accent-before);
+    border-color: transparent;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+
+    @media screen and (min-width: 1280px) {
+        @include lh(30, 24, 24px);
+        @include Btn(desktop, desktop);
+    }
+}

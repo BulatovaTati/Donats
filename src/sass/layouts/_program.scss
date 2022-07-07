@@ -1,0 +1,24 @@
+.program__title {
+    @extend %title;
+}
+
+.program__description {
+    margin-bottom: 8px;
+}
+
+.program__list--desc {
+    @extend %list;
+    margin: 0;
+    padding: 0;
+}
+
+.program__item {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &::before {
+        content: '\003E';
+        margin-right: 4px;
+    }
+}

@@ -1,5 +1,13 @@
 body {
-    background-color: getColor(primary);
+    background-color: getColor(background-color);
+    color: getColor(primary);
+    font-family: getFont(basic);
+
+    @include lh(20, 16, 16px);
+
+    @media screen and (min-width: 1280px) {
+        @include lh(22, 18, 18px);
+    }
 }
 
 body.modal-open,
