@@ -1,5 +1,5 @@
 <header class="header section" id="header">
-  <div class="container">
+  <div class="container header__container">
     <a href="#" class="header__logo">
       <img
         class="header__img"
@@ -8,11 +8,33 @@
         width="158"
       />
     </a>
-    <ul class="header__list">
-      <li class="header__item">About us</li>
-      <li class="header__item">Program</li>
-      <li class="header__item">Reviews</li>
-      <li class="header__item">Contacts</li>
-    </ul>
+    <button
+      type="button"
+      class="nav__menu--button"
+      aria-expanded="false"
+      aria-controls="menu__container"
+      data-menu-button
+    >
+      <svg width="30" height="16" aria-label="Переключатель мобильного меню">
+        <use
+          class="icon__menu"
+          href="/src/images/icon/sprite.svg#icon-menu"
+        ></use>
+        <use
+          class="icon__cross"
+          href="/src/images/icon/sprite.svg#icon-close"
+        ></use>
+      </svg>
+    </button>
+    <!-- Навігація на інші сторінки сайту -->
+
+    <div class="menu__container" id="menu__container" data-menu>
+      <ul class="header__list">
+        <li class="header__item">About us</li>
+        <li class="header__item">Program</li>
+        <li class="header__item">Reviews</li>
+        <li class="header__item">Contacts</li>
+      </ul>
+    </div>
   </div>
 </header>
