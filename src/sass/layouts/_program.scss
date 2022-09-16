@@ -6,7 +6,8 @@
     margin-bottom: 8px;
 }
 
-.program__list--desc {
+.program__list--desc,
+.program__list--ex {
     @extend %list;
     margin: 0;
     padding: 0;

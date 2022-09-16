@@ -1,3 +1,8 @@
 .about__title {
     @extend %title;
 }
+
+.about-card-set__img {
+    margin: auto;
+    margin-bottom: 20px
+}
