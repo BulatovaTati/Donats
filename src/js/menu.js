@@ -1,8 +1,12 @@
 (() => {
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
+  const navLinks = document.querySelector('.header__list');
+  const navLinksMenu = document.querySelector('#menu__container');
 
-  menuBtnRef.addEventListener('click', () => {
+  menuBtnRef.addEventListener('click', onMenuHandleClick);
+
+  function onMenuHandleClick() {
     const expanded =
       menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
@@ -11,38 +15,31 @@
 
     mobileMenuRef.classList.toggle('is-open');
     document.body.classList.toggle('is-menu-shown');
-  });
+  }
+
+  if (navLinks) {
+    navLinks.addEventListener('click', onMenuLinkClick);
+  }
+
+  if (navLinksMenu) {
+    navLinksMenu.addEventListener('click', onMenuMobilLinckClick);
+    function onMenuMobilLinckClick() {
+      onMenuHandleClick();
+    }
+  }
 })();
 
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelectorAll('[data-open-modal__window]'),
-//     closeModalBtn: document.querySelector('[data-close-modal__window]'),
-//     modal: document.querySelector('[data-modal__window]'),
-//   };
-//   let isShown = false;
+function onMenuLinkClick(e) {
+  e.preventDefault();
 
-//   refs.openModalBtn.forEach(el => el.addEventListener('click', toggleModal));
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-//   refs.modal.addEventListener('click', onBackdropClick);
+  const attrib = e.target.getAttribute('data-route');
 
-//   function toggleModal() {
-//     refs.modal.classList.toggle('is-hidden');
-//     document.body.classList.toggle('js-modal-is-hidden');
-//     isShown
-//       ? document.body.removeEventListener('keydown', onKeyDown)
-//       : document.body.addEventListener('keydown', onKeyDown);
-//     isShown = !isShown;
-//   }
+  const gotoBlock = document.getElementById(attrib);
 
-//   function onBackdropClick(event) {
-//     if (event.target != event.currentTarget) {
-//       return;
-//     }
-//     toggleModal();
-//   }
+  const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
 
-//   function onKeyDown(event) {
-//     event.code === 'Escape' ? toggleModal() : none;
-//   }
-// })();
+  window.scrollTo({
+    top: gotoBlockValue,
+    behavior: 'smooth',
+  });
+}

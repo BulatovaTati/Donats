@@ -1,39 +1,35 @@
 <header class="header section" id="header">
   <div class="container header__container">
-    <a href="#" class="header__logo">
-      <img
-        class="header__img"
-        src="./images/desktop/hero/logo-min.png"
-        alt="Logo"
-        width="158"
-      />
-    </a>
-    <button
-      type="button"
-      class="nav__menu--button"
-      aria-expanded="false"
-      aria-controls="menu__container"
-      data-menu-button
-    >
+    <img
+      class="header__img"
+      src="./images/desktop/hero/logo-min.png"
+      alt="Logo"
+      width="96"
+      height="44"
+    />
+    <button type="button" class="nav__menu--button" data-menu-button>
       <svg width="30" height="16" aria-label="Переключатель мобильного меню">
-        <use
-          class="icon__menu"
-          href="/src/images/icon/sprite.svg#icon-menu"
-        ></use>
+        <use class="icon__menu" href="./images/icon/sprite.svg#icon-menu"></use>
         <use
           class="icon__cross"
-          href="/src/images/icon/sprite.svg#icon-close"
+          href="./images/icon/sprite.svg#icon-close"
         ></use>
       </svg>
     </button>
-    <!-- Навігація на інші сторінки сайту -->
-
-    <div class="menu__container" id="menu__container" data-menu>
-      <ul class="header__list">
-        <li class="header__item">About us</li>
-        <li class="header__item">Program</li>
-        <li class="header__item">Reviews</li>
-        <li class="header__item">Contacts</li>
+    <div class="menu__container" data-menu>
+      <ul class="header__list" id="menu__container">
+        <li class="header__item">
+          <a data-route="about" href="#about">About us</a>
+        </li>
+        <li class="header__item">
+          <a data-route="program" href="#program">Program</a>
+        </li>
+        <li class="header__item">
+          <a data-route="reviews" href="#reviews">Reviews</a>
+        </li>
+        <li class="header__item">
+          <a data-route="contact" href="#contact">Contacts</a>
+        </li>
       </ul>
     </div>
   </div>

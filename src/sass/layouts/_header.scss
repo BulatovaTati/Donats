@@ -4,12 +4,8 @@
      align-items: center;
  }
 
- body {
-
-     &.is-modal-shown,
-     &.is-menu-shown {
-         overflow: hidden;
-     }
+ .header__img {
+     margin: auto;
  }
 
  .header__list {
@@ -114,11 +110,11 @@
 
          padding-top: 48px;
          padding-bottom: 48px;
-         padding-left: 40px;
+
 
          display: flex;
          flex-direction: column;
-         justify-content: space-between;
+
          background-color: rgba(254, 243, 228, 0.9);
          transform: translateX(-100%);
 

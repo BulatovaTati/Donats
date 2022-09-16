@@ -10,7 +10,11 @@ body {
     }
 }
 
-body.modal-open,
-body.is-open {
-    overflow: hidden;
+
+body {
+
+    &.is-modal-shown,
+    &.is-menu-shown {
+        overflow: hidden;
+    }
 }
