@@ -1,3 +1,7 @@
 .reviews__title {
     @extend %title;
 }
+
+.reviews__list {
+    @extend %list;
+}
