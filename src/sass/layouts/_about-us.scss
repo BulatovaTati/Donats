@@ -6,3 +6,65 @@
     margin: auto;
     margin-bottom: 20px
 }
+
+.about__container {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+.about__description--container {
+    @media screen and (min-width: 768px) {
+        max-width: 392px;
+
+        margin-left: 30px;
+    }
+
+}
+
+.about__description,
+.about__description--add {
+    margin-bottom: 20px;
+}
+
+.about-us__button {
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.27;
+    font-family: 'Caveat Brush';
+    text-align: center;
+    color: #AB816C;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: #AB816C;
+    }
+
+    // @media screen and (min-width: 1280px) {
+    //     display: none;
+    // }
+}
+
+.about-us__text--visible {
+    @media screen and (max-width: 1279.98px) {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+
+        &.is-open {
+            opacity: 1;
+            position: unset;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        opacity: 1;
+    }
+}
