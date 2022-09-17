@@ -10,8 +10,6 @@ function onMenuHandleClick() {
 
   menuBtnRef.classList.toggle('is-open');
   menuBtnRef.setAttribute('aria-expanded', !expanded);
-
-  mobileMenuRef.classList.toggle('is-open');
   document.body.classList.toggle('is-menu-shown');
 
   if (navLinks) {
@@ -29,23 +27,13 @@ function onMenuHandleClick() {
 function onMenuLinkClick(e) {
   e.preventDefault();
 
-  const attrib = e.target.getAttribute('data-route');
-  const gotoBlock = document.getElementById(attrib);
+  const getAttribute = e.target.getAttribute('data-route');
+  const getElemId = document.getElementById(getAttribute);
 
-  const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
+  const scrollToId = getElemId.getBoundingClientRect().top + scrollY;
 
   window.scrollTo({
-    top: gotoBlockValue,
+    top: scrollToId,
     behavior: 'smooth',
   });
 }
-
-// function OnDec() {
-//   const navLinksMenu = document.querySelector('#menu__container');
-
-//   if (navLinksMenu) {
-//     navLinksMenu.addEventListener('click', onMenuLinkClick);
-//     menuBtnRef.classList.toggle('is-open');
-//     menuBtnRef.setAttribute('aria-expanded', !expanded);
-//   }
-// }
