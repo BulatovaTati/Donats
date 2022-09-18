@@ -17,7 +17,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
 
     <link rel="stylesheet" href="./sass/index.scss" />
@@ -31,6 +31,28 @@
     <include src="./partials/registration.html"></include>
     <include src="./partials/contact.html"></include>
     <include src="./partials/footer.html"></include>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          dynamicBullets: true,
+          clickable: true,
+        },
+
+        effect: 'flip',
+        flipEffect: {
+          slideShadows: false,
+        },
+      });
+    </script>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
