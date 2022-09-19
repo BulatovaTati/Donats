@@ -11,6 +11,11 @@
 
 }
 
+.socials__list--footer {
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
 .socials__item {
     transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s;
     padding: 2px;

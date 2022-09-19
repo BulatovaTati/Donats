@@ -8,6 +8,10 @@
     right: 0;
 }
 
+.footer__list {
+    @extend %list;
+}
+
 // .footer--socials,
 // .footer__list {
 //     @extend %list;

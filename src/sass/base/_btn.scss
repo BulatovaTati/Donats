@@ -8,6 +8,7 @@
     border-color: transparent;
     border-radius: 25px;
     text-align: center;
+    outline: none;
     cursor: pointer;
     transition: box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -33,15 +34,22 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: text-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover,
     &:focus {
-        color: #AB816C;
+        text-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
     }
 
     @media screen and (min-width: 1280px) {
         display: none;
     }
+}
+
+.contact_btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .about-us__text--visible,
