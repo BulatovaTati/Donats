@@ -1,31 +1,224 @@
-// .main-bcg-img {
+.main-bcg-img {
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 767.9px) {
+        height: 460.51px;
+        min-width: 320px;
+        background-image: url('../images/mobile/bcg/1x/pic-donuts@1x.png'),
+            url('../images/mobile/bcg/1x/header-bg@1x.png');
+        background-position: top left, bottom;
+        background-size: 130px, cover;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/mobile/bcg/2x/pic-donuts@2x.png'),
+                url('../images/mobile/bcg/2x/header-bg@2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/mobile/bcg/3x/pic-donuts@3x.png'),
+                url('../images/mobile/bcg/3x/header-bg@3x.png');
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 622px;
+        background-image: url('../images/tablet/bcg/1x/bg@1x.png');
+        background-position: bottom;
+        background-size: cover;
+
+        @media (min-device-pixel-ratio: 2),
+
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/tablet/bcg/2x/bg@2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/tablet/bcg/3x/bg@3x.png');
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        height: 1078px;
+        background-image: url('../images/desktop/about-us/1x/spoon-1x.png'),
+            url('../images/desktop/header/1x/pic-donuts1x.png'),
+            url('../images/desktop/bcg/1x/bcg-top1x.png');
+
+        background-position: 0px 461px, 100% 0, bottom;
+        background-size: 142px, 619px, cover;
 
 
-//     @media screen and (min-width: 1280px) {
-//         max-width: 793x;
-//         height: 831px;
-//         position: absolute;
-//         background-size: 100%;
-//         background-repeat: no-repeat;
-//         background-position: 0 65%;
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/desktop/about-us/2x/spoon-2x.png'),
+                url('../images/desktop/header/2x/pic-donuts2x.png'),
+                url('../images/desktop/bcg/2x/bcg-top2x.png')
+        }
 
-//         background-image: url('/src/images/desktop/header/1x/pic-donuts1x.png');
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/desktop/about-us/3x/spoon-3x.png'),
+                url('../images/desktop/header/3x/pic-donuts3x.png'),
+                url('../images/desktop/bcg/3x/bcg-top3x.png')
+        }
+    }
+}
 
+.header__container {
+    @media screen and (min-width: 768px) and (max-width: 1279.9px) {
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 20px;
+            width: 378px;
+            height: 396px;
+            pointer-events: none;
+            background-image: url('../images/tablet/bcg/1x/pic-donuts1x.png');
+            background-position: top right 69px;
+            background-size: 377px;
+            background-repeat: no-repeat;
 
-//         @media (min-device-pixel-ratio: 2),
-//         (min-resolution: 192dpi),
-//         (min-resolution: 2dppx) {
-//             & {
-//                 background-image: url('/src/images/desktop/header/2x/pic-donuts2x.png');
-//             }
-//         }
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/tablet/bcg/2x/pic-donut2x.png');
+            }
 
-//         @media (min-device-pixel-ratio: 3),
-//         (min-resolution: 288dpi),
-//         (min-resolution: 3dppx) {
-//             & {
-//                 background-image: url('/src/images/desktop/header/3x/pic-donuts3x.png');
-//             }
-//         }
-//     }
-// }
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/tablet/bcg/3x/pic-donuts3x.png');
+            }
+        }
+    }
+
+}
+
+.second-bcg-img {
+    min-width: 320px;
+    background-image: url('../images/mobile/bcg/1x/bg@1x.png');
+    background-repeat: no-repeat;
+    background-position: top 11px center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/mobile/bcg/2x/bg@2x.png');
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url('../images/mobile/bcg/3x/bg@3x.png');
+    }
+
+    @media screen and (min-width: 768px) {
+        max-height: 1260px;
+        background-image: url('../images/tablet/bcg/1x/bg@1x.png');
+        background-position: top center;
+        background-size: cover;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/tablet/bcg/2x/bg@2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/tablet/bcg/3x/bg@3x.png');
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-height: 1499px;
+        background-image: url('../images/desktop/bcg/1x/bcg-page1x.png');
+        background-position: top center;
+        background-size: cover;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/desktop/bcg/2x/bcg-page2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/desktop/bcg/3x/bcg-page3x.png');
+        }
+    }
+
+    &__footer {
+        background-image: url('../images/mobile/bcg/1x/Wheat-flour1x.png');
+        background-position: right bottom;
+        background-size: 87px 64px;
+        background-repeat: no-repeat;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/mobile/bcg/2x/Wheat-flour2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/mobile/bcg/3x/Wheat-flour3x.png');
+        }
+
+        @media screen and (min-width: 768px) {
+            background-image: url('../images/tablet/bcg/1x/Wheat-flour-2@1x.png');
+            background-position: right bottom;
+            background-size: 147px 144px;
+            background-repeat: no-repeat;
+
+            @media (min-device-pixel-ratio: 2),
+
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/tablet/bcg/2x/Wheat-flour-2@2x.png');
+            }
+
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/tablet/bcg/3x/Wheat-flour-2@3x.png');
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            background-image: url('../images/desktop/footer/1x/Wheat-flour-1x.png');
+            background-position: right bottom;
+            background-size: 319px 184px;
+            background-repeat: no-repeat;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/desktop/footer/2x/Wheat-flour-2x.png');
+
+            }
+
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/desktop/footer/3x/Wheat-flour-3x.png');
+            }
+        }
+    }
+}

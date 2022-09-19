@@ -11,6 +11,16 @@
      }
  }
 
+ .header__img {
+     margin-left: auto;
+     margin-right: auto;
+
+     @media screen and (min-width: 768px) {
+         margin: 0;
+     }
+
+ }
+
  .header__list {
      font-family: 'Montserrat';
      font-weight: 500;
