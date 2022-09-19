@@ -52,28 +52,21 @@
 
 .regisration-container__content-inform {
     padding-top: 91px;
-    margin-bottom: 16px;
+    margin: 0 auto 16px auto;
+
     border-bottom: 1px solid rgba(171, 129, 108, 0.5);
     border: none;
     font-weight: 500;
     font-size: 18px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+
+
 
     @media screen and (min-width: 768px) {
         width: 179px;
-        padding-right: 30px;
-        padding-top: 16px;
-        padding-bottom: 74px;
-
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-right: 30px;
-
+        padding: 16px 30px 74px 0;
+        margin: auto 30px auto 0;
         border-right: 1px solid rgba(171, 129, 108, 0.5);
-
-
         text-align: right;
 
 
