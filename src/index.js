@@ -7,3 +7,4 @@ import './js/to-top';
 import './js/readmore-prod';
 import './js/readmore-about';
 import './js/smooth-scroll';
+import './js/swiper';
