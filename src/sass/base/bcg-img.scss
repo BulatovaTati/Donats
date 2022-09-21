@@ -107,7 +107,7 @@
 }
 
 .second-bcg-img {
-    min-width: 320px;
+
     background-image: url('../images/mobile/bcg/1x/bg@1x.png');
     background-repeat: no-repeat;
     background-position: top 11px center;
@@ -126,10 +126,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        max-height: 1260px;
         background-image: url('../images/tablet/bcg/1x/bg@1x.png');
-        background-position: top center;
-        background-size: cover;
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -145,7 +142,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-        max-height: 1499px;
+
         background-image: url('../images/desktop/bcg/1x/bcg-page1x.png');
         background-position: top center;
         background-size: cover;
@@ -184,11 +181,10 @@
         @media screen and (min-width: 768px) {
             background-image: url('../images/tablet/bcg/1x/Wheat-flour-2@1x.png');
             background-position: right bottom;
-            background-size: 147px 144px;
+            background-size: 270px 131px;
             background-repeat: no-repeat;
 
             @media (min-device-pixel-ratio: 2),
-
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: url('../images/tablet/bcg/2x/Wheat-flour-2@2x.png');
@@ -218,6 +214,109 @@
             (min-resolution: 288dpi),
             (min-resolution: 3dppx) {
                 background-image: url('../images/desktop/footer/3x/Wheat-flour-3x.png');
+            }
+        }
+    }
+
+
+}
+
+.registration__container {
+    &::before {
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            content: '';
+            top: 0px;
+            left: -48px;
+            width: 235px;
+            height: 255px;
+            background-image: url('../images/tablet/registration/donut4-2@1x.png');
+            background-size: 196px;
+
+            background-repeat: no-repeat;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/tablet/registration/donut4-2@2x.png');
+            }
+
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/tablet/registration/donut4-2@3x.png');
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 0;
+            left: 46px;
+            width: 257px;
+            height: 255px;
+            background-image: url('../images/desktop/registration/1x/donut1x.png');
+            background-size: 266px;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/desktop/registration/2x/donut2x.png');
+            }
+
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/desktop/registration/3x/donut3x.png');
+            }
+        }
+    }
+
+    &::after {
+        pointer-events: none;
+
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            content: '';
+            z-index: 0;
+            bottom: -139px;
+            right: -32px;
+            width: 280px;
+            height: 300px;
+            background-image: url('../images/tablet/registration/kisspng-party-confetti-birthday@1.png');
+            background-size: 280px;
+            background-repeat: no-repeat;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/tablet/registration/kisspng-party-confetti-birthday@2x.png');
+            }
+
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/tablet/registration/kisspng-party-confetti-birthday@3x.png');
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            top: 0;
+            right: 0;
+            width: 589px;
+            height: 618px;
+            background-image: url('../images/desktop/registration/1x/kisspng-party-confetti-birthday1x.png');
+            background-size: 589px 594px;
+            background-repeat: no-repeat;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/desktop/registration/2x/kisspng-party-confetti-birthday2x.png');
+            }
+
+            @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+                background-image: url('../images/desktop/registration/3x/kisspng-party-confetti-birthday3x.png');
             }
         }
     }
