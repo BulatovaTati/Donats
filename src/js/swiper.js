@@ -4,9 +4,10 @@ import 'swiper/swiper-bundle.css';
 new Swiper('.swiper', {
   loop: true,
   centeredSlides: true,
-
+  speed: 500,
+  direction: 'vertical',
   autoplay: {
-    delay: 3500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   pagination: {
@@ -14,13 +15,13 @@ new Swiper('.swiper', {
     dynamicBullets: true,
     clickable: true,
   },
-  effect: 'flip',
-  flipEffect: {
-    slideShadows: false,
-  },
   keyboard: {
     enabled: true,
-    pageUpDown: true,
     onlyInViewport: true,
   },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  preloadImages: false,
 });
