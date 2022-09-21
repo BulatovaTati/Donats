@@ -1,12 +1,10 @@
 <header class="header section" id="header">
   <div class="container header__container">
-    <img
-      class="header__img"
-      src="./images/desktop/hero/logo-min.png"
-      alt="Logo"
-      width="96"
-      height="44"
-    />
+    <a href="#registration" class="header__logo">
+      <svg aria-label="Logo" class="header__logo--icon">
+        <use href="./images/icon/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
     <button type="button" class="nav__menu--button" data-menu-button>
       <svg width="30" height="16" aria-label="Переключатель мобильного меню">
         <use class="icon__menu" href="./images/icon/sprite.svg#icon-menu"></use>
@@ -17,6 +15,11 @@
       </svg>
     </button>
     <div class="menu__container" data-menu>
+      <a href="#" class="header__logo--menu-container">
+        <svg aria-label="helping logo" class="header__logo--menu">
+          <use href="./images/icon/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
       <ul class="header__list" id="menu__container">
         <li class="header__item">
           <a data-route="about" href="#about">About us</a>

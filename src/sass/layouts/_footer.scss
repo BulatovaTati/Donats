@@ -16,3 +16,14 @@
     display: flex;
     justify-content: space-between;
 }
+
+.footer__item {
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+        fill: #AB816C;
+    }
+}
