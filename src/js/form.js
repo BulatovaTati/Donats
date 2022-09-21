@@ -32,3 +32,24 @@ form.addEventListener(
     });
   }
 })();
+
+const send = document.querySelector('.contact__form');
+
+send.addEventListener('submit', evt => {
+  evt.preventDefault();
+
+  evt.currentTarget.reset();
+  localStorage.removeItem(STORAGE_KEY);
+});
+
+send.addEventListener(
+  'input',
+  Throttle(evt => {
+    let formData = localStorage.getItem(STORAGE_KEY);
+    formData = formData ? JSON.parse(formData) : {};
+
+    formData[evt.target.name] = evt.target.value;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+  }, 500)
+);
