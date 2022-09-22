@@ -5,9 +5,9 @@ new Swiper('.swiper', {
   loop: true,
   centeredSlides: true,
   speed: 500,
-  direction: 'vertical',
+
   autoplay: {
-    delay: 4500,
+    delay: 3500,
     disableOnInteraction: false,
   },
   pagination: {

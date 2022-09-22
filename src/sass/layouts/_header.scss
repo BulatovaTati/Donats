@@ -9,7 +9,6 @@
      }
  }
 
-
  .header__logo {
      margin-left: auto;
      margin-right: auto;
@@ -67,8 +66,10 @@
  }
 
  .header__item {
+
      &:not(:last-child) {
-         margin-bottom: 45px;
+         margin-bottom: 25px;
+
 
          @media screen and (min-width: 1280px) {
              margin-bottom: 0;
