@@ -107,11 +107,14 @@
 }
 
 .second-bcg-img {
-
     background-image: url('../images/mobile/bcg/1x/bg@1x.png');
     background-repeat: no-repeat;
     background-position: top 11px center;
     background-size: cover;
+
+    margin-left: auto;
+    margin-right: auto;
+
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

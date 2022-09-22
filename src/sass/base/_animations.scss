@@ -22,3 +22,39 @@
         }
     }
 }
+
+.program__list--img {
+    position: absolute;
+    bottom: 75%;
+    left: 25%;
+    animation:
+        rotateOut 3500ms linear 3500ms infinite forwards;
+
+    @media screen and (min-width: 1280px) {
+        animation: rollIn 3500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) both,
+            rotateOut 3500ms linear 3500ms infinite forwards;
+    }
+
+}
+
+@keyframes rollIn {
+    0% {
+        transform: translateX(100px) rotate(-720deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateOut {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
