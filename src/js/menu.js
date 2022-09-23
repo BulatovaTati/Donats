@@ -23,15 +23,6 @@ function onMenuHandleClick() {
 function onMenuLinkClick(e) {
   e.preventDefault();
 
-  const nodeName =
-    e.target && e.target.nodeName && e.target.nodeName.toLowerCase();
-  console.log(nodeName);
-  if (nodeName !== 'a') {
-    menuBtnRef.classList.toggle('is-open');
-    document.body.classList.toggle('is-menu-shown');
-
-    return;
-  }
   const getAttribute = e.target.getAttribute('data-route');
   const getElemId = document.getElementById(getAttribute);
 
