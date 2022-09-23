@@ -15,18 +15,20 @@ function onMenuHandleClick() {
   if (navLinks) {
     navLinks.addEventListener('click', onMenuLinkClick);
   }
-
   if (navLinksMenu) {
-    navLinksMenu.addEventListener('click', onMenuMobilLinckClick);
-    function onMenuMobilLinckClick() {
-      onMenuHandleClick();
-    }
+    navLinksMenu.addEventListener('click', onMenuHandleClick);
   }
 }
 
 function onMenuLinkClick(e) {
   e.preventDefault();
+  const nodeName =
+    e.target && e.target.nodeName && e.target.nodeName.toLowerCase();
 
+  if (nodeName !== 'a') {
+    menuBtnRef.classList.toggle('is-open');
+    return;
+  }
   const getAttribute = e.target.getAttribute('data-route');
   const getElemId = document.getElementById(getAttribute);
 

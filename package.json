@@ -22,7 +22,7 @@
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
     "swiper": "^8.4.2",
-    "validator": "^13.7.0"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
