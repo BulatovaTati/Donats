@@ -1,7 +1,7 @@
 @import './utils/vars';
 @import './utils/mixins';
 @import './base/container';
-@import './base/btn';
+@import './components/btn';
 @import './base/resets';
 
 @import './utils/placeholders';
@@ -9,7 +9,7 @@
 @import './utils/visually-hidden';
 @import './base/common';
 @import './base/animations';
-@import './base/socials';
+@import './components/socials';
 @import './components/mobile-menu';
 @import './components/modal-menu';
 @import './components/scroll.scss';
@@ -24,4 +24,4 @@
 @import './layouts/registration';
 @import './layouts/contact';
 @import './layouts/footer';
-@import './base/bcg-img.scss';
+@import './components/bcg-img';

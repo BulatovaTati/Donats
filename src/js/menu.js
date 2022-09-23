@@ -22,7 +22,10 @@ function onMenuHandleClick() {
 
 function onMenuLinkClick(e) {
   e.preventDefault();
+
   if (e.target.nodeName !== 'A') return;
+  console.log('e.target: ', e.target);
+
   const getAttribute = e.target.getAttribute('data-route');
   const getElemId = document.getElementById(getAttribute);
 
