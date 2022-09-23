@@ -3,7 +3,7 @@
 }
 
 .program--container {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         display: flex;
     }
 }
@@ -15,14 +15,14 @@
 .program__container--desc {
     margin-bottom: 60px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         margin-right: 30px;
         flex-basis: calc(100% - 40px / 2);
         display: flex;
         flex-wrap: wrap;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         margin-right: 44px;
     }
 }
@@ -87,7 +87,7 @@
     background-color: #FEF3E4;
     border-radius: 50%;
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         max-width: 180px;
         height: 180px;
     }
@@ -101,7 +101,7 @@
 .program__item--ex:not(:last-child) {
     margin-bottom: 57px;
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         margin-bottom: 61px;
     }
 }
@@ -109,11 +109,11 @@
 .ex-rigth {
     margin-right: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         margin-right: 15px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         margin-right: 32px;
     }
 }
@@ -121,7 +121,7 @@
 .ex-transform {
     transform: translateY(25px);
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         transform: translateY(56px);
     }
 }

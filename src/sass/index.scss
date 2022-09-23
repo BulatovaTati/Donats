@@ -1,19 +1,20 @@
 @import './utils/vars';
 @import './utils/mixins';
-@import './base/container';
-@import './components/btn';
-@import './base/resets';
-
 @import './utils/placeholders';
-
 @import './utils/visually-hidden';
+
+@import './base/container';
 @import './base/common';
 @import './base/animations';
+@import './base/resets';
+
+
+@import './components/btn';
 @import './components/socials';
 @import './components/mobile-menu';
 @import './components/modal-menu';
-@import './components/scroll.scss';
-
+@import './components/scroll';
+@import './components/bcg-img';
 
 
 @import './layouts/hero';
@@ -24,4 +25,3 @@
 @import './layouts/registration';
 @import './layouts/contact';
 @import './layouts/footer';
-@import './components/bcg-img';

@@ -30,12 +30,12 @@
 
     height: 510px;
     width: 290px;
-    background-color: #FFFFF9;
-    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+    background-color: getColor(bcg-clear);
+    box-shadow: -4px -4px 4px getColor(text-shadow), 4px 4px 4px getColor(text-shadow);
     border-radius: 150px 150px 0px 0px;
 
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         width: 634px;
         height: 260px;
         border-radius: 150px 150px 150px 150px;
@@ -45,7 +45,7 @@
         align-items: center;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         width: 822px;
     }
 }
@@ -54,26 +54,21 @@
     padding-top: 91px;
     margin: 0 auto 16px auto;
 
-    border-bottom: 1px solid rgba(171, 129, 108, 0.5);
+    border-bottom: 1px solid getColor(text-shadow);
     border: none;
     font-weight: 500;
     font-size: 18px;
     text-align: center;
 
-
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         width: 179px;
         padding: 16px 30px 74px 0;
         margin: auto 30px auto 0;
-        border-right: 1px solid rgba(171, 129, 108, 0.5);
+        border-right: 1px solid getColor(text-shadow);
         text-align: right;
-
-
-
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         width: 264px;
         font-size: 20px;
     }
@@ -85,23 +80,21 @@
     margin-bottom: 25px;
 
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         margin-bottom: 34px;
         margin-left: 35px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         margin-left: 107px;
         width: 127px;
     }
 }
 
-
-
 .registration__form {
     text-align: center;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -111,7 +104,7 @@
 
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         margin-left: 0;
     }
 }
@@ -121,14 +114,14 @@
     text-align: center;
     margin-bottom: 17px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         padding: 0;
         width: 234px;
         padding-right: 20px;
         text-align: start;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         padding-right: 15px;
         margin-bottom: 13px;
         font-size: 18px;
@@ -139,7 +132,7 @@
     border: none;
     margin-bottom: 22px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         margin-bottom: 0;
     }
 }
@@ -151,35 +144,34 @@
     margin-bottom: 22px;
     cursor: pointer;
 
-    border-bottom: 0.1px solid #AB816C;
+    border-bottom: 0.1px solid getColor(accent-before);
     background-color: transparent;
 
     &:hover,
     &:focus {
 
         outline: none;
-        border-left: 1px solid rgba(171, 129, 108, 0.5);
-        border-right: 1px solid rgba(171, 129, 108, 0.5);
+        border-left: 1px solid getColor(bcg-up);
+        border-right: 1px solid getColor(bcg-up);
         border-radius: 5px;
-        box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+        box-shadow: -4px -4px 4px getColor(text-shadow),
+            4px 4px 4px getColor(text-shadow);
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         width: 234px;
         height: 25px;
     }
 }
 
 .form-registration__button {
-
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         position: absolute;
         top: 110px;
         right: 21px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         top: 103px;
         right: 70px;
     }

@@ -10,14 +10,14 @@
     text-align: center;
     outline: none;
     cursor: pointer;
-    transition: box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: box-shadow getProperty(time) getProperty(cubic);
 
     &:hover,
     &:focus {
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: getShadow(box);
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         @include lh(30, 24, 24px);
         @include Btn(desktop, desktop);
     }
@@ -26,22 +26,21 @@
 .about-us__button,
 .program__button {
     padding: 0;
-    font-size: 18px;
-    line-height: 1.27;
-    font-family: 'Caveat Brush';
+    @include lh(23, 18, 18px);
+    font-family: getFont(accent);
     text-align: center;
-    color: #AB816C;
+    color: getColor(accent-before);
     background-color: transparent;
     border: none;
     cursor: pointer;
-    transition: text-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: text-shadow getProperty(time) getProperty(cubic);
 
     &:hover,
     &:focus {
-        text-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+        text-shadow: -4px -4px 4px getColor(text-shadow) 4px 4px 4px getColor(text-shadow);
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         display: none;
     }
 }
@@ -54,7 +53,7 @@
 
 .about-us__text--visible,
 .program__text--visible {
-    @media screen and (max-width: 1279.98px) {
+    @media screen and (max-width: getSize(wdesktop)) {
         position: absolute;
         opacity: 0;
         top: 0;
@@ -67,7 +66,7 @@
         }
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         opacity: 1;
     }
 }

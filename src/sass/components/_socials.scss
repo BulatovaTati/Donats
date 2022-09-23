@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         justify-content: left;
     }
 
@@ -17,7 +17,7 @@
 }
 
 .socials__item {
-    transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s;
+    transition: fill getProperty(time) getProperty(cubic), transform .5s;
     padding: 2px;
 
     &:not(:last-child) {
@@ -27,7 +27,7 @@
 
     &:hover,
     &:focus {
-        fill: #AB816C;
+        fill: getColor(accent-before);
         transform: scale(1.1);
     }
 

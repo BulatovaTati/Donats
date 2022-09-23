@@ -19,7 +19,7 @@
 
 .footer__item {
     cursor: pointer;
-    transition: fill 250ms cubic-bezier(0.075, 0.82, 0.165, 1), transform .5s;
+    transition: fill getProperty(time) getProperty(cubic), transform .5s;
 
     &:hover,
     &:focus {

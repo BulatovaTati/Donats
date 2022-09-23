@@ -5,7 +5,7 @@ body {
 
     @include lh(20, 16, 16px);
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         @include lh(22, 18, 18px);
     }
 }

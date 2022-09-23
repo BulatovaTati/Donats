@@ -51,7 +51,7 @@
  }
 
  .header__list {
-     font-family: 'Montserrat';
+    font-family: getFont(basic);
      font-weight: 500;
      @include lh(22, 18, 18px);
      text-align: center;
@@ -77,7 +77,7 @@
          }
      }
 
-     transition: text-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+     transition: text-shadow  getProperty(time) getProperty(cubic);
      cursor: pointer;
 
      &:hover,

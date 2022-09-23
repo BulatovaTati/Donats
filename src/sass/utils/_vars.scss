@@ -4,15 +4,22 @@ $colors: (
     'secondary': #ffffff,
 
     'background-color': #ffffff,
+    'bcg-clear': #FFFFF9,
     'accent-icon': #674D40,
     'accent-before': #AB816C,
     'color-label': rgb(171, 129, 108),
     'color-form-reg': #FFFFF9,
+
+
+    'text-shadow': rgba(171, 129, 108, 0.15),
+    'bcg': rgba(254, 243, 228, 0.9),
+    'bcg-up': rgba(171, 129, 108, 0.5),
 );
 
 $shadows: (
     'card': 0px 8px 30px rgba(212, 20, 67, 0.1),
     'btn': 0px 6px 5px rgba(0, 0, 0, 0.29),
+    'box': 0px 4px 4px rgb(0 0 0 / 25%),
 );
 
 $properties: (
@@ -29,6 +36,7 @@ $breakpoints: (
     'wmobile':319.98px,
     'mobile': 320px,
     'tablet': 768px,
+    'wdesktop': 1279.98px,
     'desktop': 1280px,
 );
 

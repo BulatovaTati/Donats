@@ -3,7 +3,7 @@
     margin-right: auto;
     background-repeat: no-repeat;
 
-    @media screen and (max-width: 767.9px) {
+    @media screen and (max-width: 767.98px) {
         height: 460.51px;
         min-width: 320px;
         background-image: url('../images/mobile/bcg/1x/pic-donuts@1x.png'),
@@ -26,7 +26,7 @@
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         height: 622px;
         background-image: url('../images/tablet/bcg/1x/bg@1x.png');
         background-position: bottom;
@@ -46,7 +46,7 @@
         }
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         height: 1078px;
         background-image: url('../images/desktop/about-us/1x/spoon-1x.png'),
             url('../images/desktop/header/1x/pic-donuts1x.png'),
@@ -76,7 +76,7 @@
 }
 
 .header__container {
-    @media screen and (min-width: 768px) and (max-width: 1279.9px) {
+    @media screen and (min-width: getSize(tablet)) and (max-width: getSize(wdesktop)) {
         &::before {
             position: absolute;
             content: '';
@@ -128,7 +128,7 @@
         background-image: url('../images/mobile/bcg/3x/bg@3x.png');
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         background-image: url('../images/tablet/bcg/1x/bg@1x.png');
 
         @media (min-device-pixel-ratio: 2),
@@ -144,7 +144,7 @@
         }
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
 
         background-image: url('../images/desktop/bcg/1x/bcg-page1x.png');
         background-position: top center;
@@ -181,7 +181,7 @@
             background-image: url('../images/mobile/bcg/3x/Wheat-flour3x.png');
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: getSize(tablet)) {
             background-image: url('../images/tablet/bcg/1x/Wheat-flour-2@1x.png');
             background-position: right bottom;
             background-size: 270px 131px;
@@ -200,7 +200,7 @@
             }
         }
 
-        @media screen and (min-width: 1280px) {
+        @media screen and (min-width: getSize(desktop)) {
             background-image: url('../images/desktop/footer/1x/Wheat-flour-1x.png');
             background-position: right bottom;
             background-size: 319px 184px;
@@ -226,7 +226,7 @@
 
 .registration__container {
     &::before {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: getSize(tablet)) {
             position: absolute;
             content: '';
             top: 0px;
@@ -251,7 +251,7 @@
             }
         }
 
-        @media screen and (min-width: 1280px) {
+        @media screen and (min-width: getSize(desktop)) {
             top: 0;
             left: 46px;
             width: 257px;
@@ -276,7 +276,7 @@
     &::after {
         pointer-events: none;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: getSize(tablet)) {
             position: absolute;
             content: '';
             z-index: 0;
@@ -301,7 +301,7 @@
             }
         }
 
-        @media screen and (min-width: 1280px) {
+        @media screen and (min-width: getSize(desktop)) {
             top: 0;
             right: 0;
             width: 589px;

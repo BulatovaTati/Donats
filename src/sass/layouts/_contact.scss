@@ -10,16 +10,17 @@
 .contact__label {
     width: 265px;
     display: block;
+
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         width: 410px;
         margin-bottom: 25px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         width: 430px;
     }
 }
@@ -32,12 +33,13 @@
     border: none;
     cursor: pointer;
 
-    border-bottom: 1px solid rgba(171, 129, 108, 0.5);
+    border-bottom: 1px solid getColor(bcg-up);
     background-color: transparent;
-    transition: box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1),
-        outline 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    @media screen and (min-width: 768px) {
+    transition: box-shadow getProperty(time) getProperty(cubic),
+        outline getProperty(time) getProperty(cubic);
+
+    @media screen and (min-width: getSize(tablet)) {
         height: 25px;
     }
 
@@ -45,9 +47,9 @@
     &:focus {
 
         outline: none;
-        border-left: 1px solid rgba(171, 129, 108, 0.5);
-        border-right: 1px solid rgba(171, 129, 108, 0.5);
+        border-left: 1px solid getColor(bcg-up);
+        border-right: 1px solid getColor(bcg-up);
         border-radius: 5px;
-        box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+        box-shadow: -4px -4px 4px getColor(text-shadow), 4px 4px 4px getColor(text-shadow);
     }
 }

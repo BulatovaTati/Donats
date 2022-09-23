@@ -4,13 +4,13 @@
     margin-right: auto;
     text-align: center;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         display: inline-block;
         max-width: 224px;
         text-align: left;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: getSize(desktop)) {
         max-width: 500px;
     }
 }
@@ -19,7 +19,7 @@
     @extend %main_title;
     margin: 0 0 16px 0;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         text-align: left;
 
     }

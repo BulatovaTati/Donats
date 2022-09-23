@@ -7,21 +7,21 @@
     margin-right: auto;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         margin: 0;
     }
 }
 
 .about__container {
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         display: flex;
         justify-content: center;
     }
 }
 
 .about__description--container {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: getSize(tablet)) {
         max-width: 392px;
         margin-left: 30px;
     }
