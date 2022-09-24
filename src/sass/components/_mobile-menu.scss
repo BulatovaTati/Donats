@@ -53,14 +53,16 @@
     transform: translateX(0);
 }
 
-.nav__menu--button.is-open~.menu__container {
-    transform: translateX(0);
-    visibility: visible;
-    pointer-events: initial;
+// .nav__menu--button.is-open~.menu__container {
+//     transform: translateX(0);
+//     visibility: visible;
+//     pointer-events: initial;
+// }
 
-}
+
 
 .menu__container {
+
     @media screen and (max-width: getSize(wdesktop)) {
         position: absolute;
         top: 0;
@@ -77,14 +79,23 @@
 
         display: flex;
         flex-direction: column;
+        opacity: 1;
+        overflow-y: scroll;
 
         background-color: getColor(bcg);
-        transform: translateX(-100%);
+
 
         transition: transform getProperty(time) cubic-bezier(0.075, 0.82, 0.165, 1),
             background-color getProperty(time) cubic-bezier(0.075, 0.82, 0.165, 1);
 
+        &.is-close {
+            opacity: 0;
+            pointer-events: none;
+
+        }
+
     }
+
 
 
 }
