@@ -81,8 +81,8 @@
         background-color: getColor(bcg);
         transform: translateX(-100%);
 
-        transition: transform getProperty(time) getProperty(cubic),
-            background-color getProperty(time) getProperty(cubic);
+        transition: transform getProperty(time) cubic-bezier(0.075, 0.82, 0.165, 1),
+            background-color getProperty(time) cubic-bezier(0.075, 0.82, 0.165, 1);
 
     }
 
