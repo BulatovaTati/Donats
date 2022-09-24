@@ -1,54 +1,81 @@
-const menuBtnRef = document.querySelector('[data-menu-button]');
-const mobileMenuRef = document.querySelector('[data-menu]');
-const navLinks = document.querySelector('.header__list');
-const navLinksMenu = document.querySelector('#menu__container');
+(() => {
+  const menuBtns = document.querySelectorAll('[data-menu-button]');
+  const navLinks = document.querySelector('.menu__container');
 
-menuBtnRef.addEventListener('click', onMenuHandleClick);
+  menuBtns.forEach(el =>
+    el.addEventListener('click', () => {
+      const expanded =
+        menuBtns.getAttribute('aria-expanded') === 'true' || false;
 
-function onMenuHandleClick() {
-  const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+      menuBtns.classList.toggle('is-open');
+      menuBtns.setAttribute('aria-expanded', !expanded);
 
-  menuBtnRef.classList.toggle('is-open');
-  menuBtnRef.setAttribute('aria-expanded', !expanded);
-  document.body.classList.toggle('is-menu-shown');
+      menuBtns.classList.toggle('is-open');
+      document.body.classList.toggle('is-menu-shown');
+    })
+  );
+})();
 
-  if (navLinks) {
-    navLinks.addEventListener('click', onMenuLinkClick);
-  }
-  // if (navLinksMenu) {
-  //   navLinks.addEventListener('click', onMenuHandleClick);
-  // }
-}
+// // const menuBtnRef = document.querySelector('[data-menu-button]');
+// // const mobileMenuRef = document.querySelector('[data-menu]');
+// // const navLinks = document.querySelector('.header__list');
+// // const navLinksMenu = document.querySelector('#menu__container');
 
-function onMenuLinkClick(e) {
-  e.preventDefault();
+// // menuBtnRef.addEventListener('click', onMenuHandleClick);
 
-  if (e.target.nodeName !== 'A') return;
-  console.log('e.target: ', e.target);
+// // function onMenuHandleClick() {
+// //   const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
-  const getAttribute = e.target.getAttribute('data-route');
-  const getElemId = document.getElementById(getAttribute);
+// //   menuBtnRef.classList.toggle('is-open');
+// //   menuBtnRef.setAttribute('aria-expanded', !expanded);
+// //   document.body.classList.toggle('is-menu-shown');
 
-  const scrollToId = getElemId.getBoundingClientRect().top + scrollY;
+// //   if (navLinks) {
+// //     navLinks.addEventListener('click', onMenuLinkClick);
+// //   }
+// //   // if (navLinksMenu) {
+// //   //   navLinks.addEventListener('click', onMenuHandleClick);
+// //   // }
+// // }
 
-  window.scrollTo({
-    top: scrollToId,
-    behavior: 'smooth',
-  });
-}
+// // function onMenuLinkClick(e) {
+// //   e.preventDefault();
 
-// (() => {
-//   const menuBtnRef = document.querySelector('[data-menu-button]');
-//   const mobileMenuRef = document.querySelector('[data-menu]');
+// //   if (e.target.nodeName !== 'A') return;
+// //   console.log('e.target: ', e.target);
 
-//   menuBtnRef.addEventListener('click', () => {
-//     const expanded =
-//       menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+// //   const getAttribute = e.target.getAttribute('data-route');
+// //   const getElemId = document.getElementById(getAttribute);
 
-//     menuBtnRef.classList.toggle('is-open');
-//     menuBtnRef.setAttribute('aria-expanded', !expanded);
+// //   const scrollToId = getElemId.getBoundingClientRect().top + scrollY;
 
-//     mobileMenuRef.classList.toggle('is-open');
-//     document.body.classList.toggle('is-menu-shown');
-//   });
-// })();
+// //   window.scrollTo({
+// //     top: scrollToId,
+// //     behavior: 'smooth',
+// //   });
+// // }
+
+// const menuBtnRef = document.querySelector('[data-menu-button]');
+// const navLinks = document.querySelector('.header__list');
+
+// menuBtnRef.addEventListener('click', onClickMenu);
+
+// function onClickMenu() {
+//   const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+
+//   menuBtnRef.classList.toggle('is-open');
+//   menuBtnRef.setAttribute('aria-expanded', !expanded);
+//   document.body.classList.toggle('is-menu-shown');
+// }
+
+// navLinks.addEventListener('click', check);
+
+// function check(e) {
+//   e.preventDefault();
+//   if (e.target.nodeName !== 'A') return;
+//   onClickMenu();
+// }
+
+// // mobileMenuRef.addEventListener('click', () => {
+// //   onClickMenu();
+// // });
