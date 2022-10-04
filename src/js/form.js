@@ -21,19 +21,7 @@ form.addEventListener(
   }, 500)
 );
 
-initForm();
-
-function initForm() {
-  let parsedData = localStorage.getItem(STORAGE_KEY);
-
-  if (parsedData) {
-    parsedData = JSON.parse(parsedData);
-
-    Object.entries(parsedData).forEach(([name, value]) => {
-      form.elements[name].value = value;
-    });
-  }
-}
+initForm(STORAGE_KEY, form);
 
 const send = document.querySelector('.contact__form');
 
@@ -56,16 +44,16 @@ send.addEventListener(
   }, 500)
 );
 
-checkStorage();
+initForm(CONTACT_KEY, send);
 
-function checkStorage() {
-  let parsedData = localStorage.getItem(CONTACT_KEY);
+function initForm(key, item) {
+  let parsedData = localStorage.getItem(key);
 
   if (parsedData) {
     parsedData = JSON.parse(parsedData);
 
     Object.entries(parsedData).forEach(([name, value]) => {
-      send.elements[name].value = value;
+      item.elements[name].value = value;
     });
   }
 }
